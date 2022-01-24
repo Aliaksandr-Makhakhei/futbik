@@ -2,10 +2,10 @@
   "users": [
     {
       "email": "mr.mahahei.sasha@gmail.com",
-      "password": "123",
-      "name": "Саша",
+      "password": "$2a$10$1tXeb4xr8h22Tk8fyhTCq.WkE6AIXHx2x2xgQACuaMDid2wKJS3Sy",
+      "name": "саша",
       "age": "23",
-      "role": "вратарь",
+      "role": "нап",
       "id": 1
     }
   ]

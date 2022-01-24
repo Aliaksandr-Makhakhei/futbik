@@ -1,0 +1,36 @@
+* {
+	margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+	border: 0;
+	vertical-align: baseline;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 100%;
+  font-family: 'Josefin Sans', sans-serif;;
+  line-height: 1;
+	overflow: hidden;
+  font-size: 10px;
+  background-image: url("./icons/background/background.svg");
+  background-image: cover;
+}
+
+a {
+  text-decoration:none;
+  color: inherit;
+}
+
+button {
+	padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+img, input{
+  display: block;
+  outline: none;
+}

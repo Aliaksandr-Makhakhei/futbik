@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "email": "mr.mahahei.sasha@gmail.com",
+      "password": "123",
+      "name": "Саша",
+      "age": "23",
+      "role": "вратарь",
+      "id": 1
+    }
+  ]
+}

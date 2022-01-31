@@ -4,13 +4,15 @@ import usersServices from "../../services/Users";
 import logo from "../../icons/navbar/logo.svg"
 import "./style.scss";
 
+
 const SignUp = () => {
   const [inputEmail, setInputEmail] = useState("");
   const [inputPass, setInputPass] = useState("");
   const [inputName, setInputName] = useState("");
   const [inputAge, setInputAge] = useState("");
   const [inputRole, setInputRole] = useState("");
-  let navigate = useNavigate();
+  const navigate = useNavigate();
+  
 
   const userData = {
     'email': inputEmail,
@@ -22,9 +24,11 @@ const SignUp = () => {
 
 
 const signUp = async () => {
-  await usersServices.register(userData)
+  await usersServices.signUp(userData)
   navigate(`/login`)
 }
+
+
 
 
 

@@ -1,23 +1,30 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import usersServices from "../../services/Users";
+// import usersServices from "../../services/Users";
+import signInReducer from "../../store/index"
 import logo from "../../icons/navbar/logo.svg"
+import { useDispatch } from "react-redux";
 import "./style.scss";
 
 const Login = () => {
   const [inputLogin, setInputLogin] = useState("");
   const [inputPass, setInputPass] = useState("");
-  let navigate = useNavigate();
+  // const navigate = useNavigate();
+  const dispatch = useDispatch()
 
-
-  const logIn = {
+  const userData = {
     email: inputLogin,
     password: inputPass
   }
 
 
+  useEffect(() => {
+    dispatch(signInReducer(userData))
+  }, [userData])
+  
+
     const signIn = async () => {
-        await usersServices.logIn(logIn)
+        await usersServices.signIn(userData)
         // navigate(`/`); перекинет на главную после логина
     }
 
@@ -41,7 +48,7 @@ const Login = () => {
           placeholder="пароль"
           onChange={(event) => setInputPass(event.target.value)}
         />
-        <div className="login__form-submit" type="submit" value="Отправить" onClick={signIn}>Войти</div> 
+        {/* <div className="login__form-submit" type="submit" value="Отправить" onClick={signIn}>Войти</div>  */}
         <Link to="/signup" className="login__form-register">Создать аккаунт</Link>
       </div>
     </div>

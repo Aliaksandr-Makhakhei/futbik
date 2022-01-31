@@ -2,10 +2,10 @@
   "users": [
     {
       "email": "mr.mahahei.sasha@gmail.com",
-      "password": "$2a$10$1tXeb4xr8h22Tk8fyhTCq.WkE6AIXHx2x2xgQACuaMDid2wKJS3Sy",
-      "name": "саша",
+      "password": "$2a$10$QLveFpfQDIkxAeTSIcJETeIDzlgMaczGNCJfQHG5ZUoqpN.bRdCia",
+      "name": "Саша",
       "age": "23",
-      "role": "нап",
+      "role": "Вратарь",
       "id": 1
     }
   ]

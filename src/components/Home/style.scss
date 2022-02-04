@@ -1,0 +1,21 @@
+.leaflet-container {
+    margin: 3rem auto;
+    height: 40rem;
+    width: 40rem;
+}
+
+.home {
+    text-align: center;
+}
+
+.home__title {
+    padding-top: 3rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.map__marker-details {
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}

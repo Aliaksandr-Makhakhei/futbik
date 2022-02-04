@@ -1,8 +1,9 @@
 import {React, useState} from "react";
 import { useNavigate } from "react-router-dom";
-import usersServices from "../../services/Users";
 import logo from "../../icons/navbar/logo.svg"
+import { useDispatch } from "react-redux";
 import "./style.scss";
+import {signUp} from "../../slices/signUpSlice"
 
 
 const SignUp = () => {
@@ -12,7 +13,7 @@ const SignUp = () => {
   const [inputAge, setInputAge] = useState("");
   const [inputRole, setInputRole] = useState("");
   const navigate = useNavigate();
-  
+  const dispatch = useDispatch()
 
   const userData = {
     'email': inputEmail,
@@ -23,13 +24,10 @@ const SignUp = () => {
   }
 
 
-const signUp = async () => {
-  await usersServices.signUp(userData)
+const onClickSignUp = () => {
+  dispatch(signUp(userData))
   navigate(`/login`)
 }
-
-
-
 
 
   return (
@@ -74,13 +72,12 @@ const signUp = async () => {
           name="role"
           value={inputRole}
           placeholder="Ваша позиция"
-          onChange={(event) => setInputRole(event.target.value)}
+          onChange={event => setInputRole(event.target.value)}
         />
-        <div className="signup__form-submit" type="submit" value="Зарегистрироваться" onClick={signUp}>Зарегистрироваться</div> 
+        <div className="signup__form-submit" type="submit" value="Зарегистрироваться" onClick={() => onClickSignUp()}>Зарегистрироваться</div> 
       </div>
     </div>
   );
 };
- //сделать onclick чтобы перекидывало на окно логина
  //добавить значек увидеть пароль для ввода пароля
 export default SignUp;

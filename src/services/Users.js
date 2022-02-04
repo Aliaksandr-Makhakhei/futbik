@@ -1,17 +1,15 @@
 import api from "../configs/api";
 
-const signIn = async (object) => {
-  await api.post(`/login`, object).then(function (response) {
-    console.log(response); //можно добавить catch
-  });
+const logIn = async (object) => {
+  const response = await api.post(`/login`, object)
+  return response
 };
 
 const signUp = async (object) => {
-  await api.post(`/users`, object).then(function (response) {
-    console.log(response); //можно добавить catch
-  });
+  const response = await api.post(`/users`, object)
+  return response
 };
 
-const exportObject = { signIn, signUp };
+const exportObject = { logIn, signUp };
 
 export default exportObject;

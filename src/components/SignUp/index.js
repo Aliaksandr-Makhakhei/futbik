@@ -2,8 +2,8 @@ import {React, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../icons/navbar/logo.svg"
 import { useDispatch } from "react-redux";
+import usersServices from "../../services/Users";
 import "./style.scss";
-import {signUp} from "../../slices/signUpSlice"
 
 
 const SignUp = () => {
@@ -24,10 +24,12 @@ const SignUp = () => {
   }
 
 
-const onClickSignUp = () => {
-  dispatch(signUp(userData))
-  navigate(`/login`)
-}
+  const onClickSignUp = async () => {
+    await usersServices.signUp(userData)
+    navigate(`/login`)
+  }
+
+
 
 
   return (

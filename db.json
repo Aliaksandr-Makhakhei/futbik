@@ -1,11 +1,11 @@
 {
-  "map" : [
+  "map": [
     {
       "id": 1,
       "name": "Стадион СШ 37",
-      "players": [{"id":1, "name": "Sasha", "role": "Вратарь"}, {"id":2, "name": "Vasya", "role": "Нападающий"}],
+      "players": [],
       "gps": {
-        "latitude": 53.930230,
+        "latitude": 53.93023,
         "longitude": 27.544289
       }
     },
@@ -69,6 +69,22 @@
       "age": "324",
       "role": "sd",
       "id": 4
+    },
+    {
+      "email": "ufufu@ggg.com",
+      "password": "$2a$10$OLPzM.rGzi57HVLm3Dj.6eXQlGszVPxkZe/oxfh0NBKcyTTetWWe2",
+      "name": "Александр",
+      "age": "23",
+      "role": "dsg",
+      "id": 5
+    },
+    {
+      "email": "mr.mah323ahei.sasha@mail.ru",
+      "password": "$2a$10$TN3RBqlwLLDGquEbraIynOnqC1OEFvTduu0LakvbUAUkRGb7cd0F6",
+      "name": "sdgsg",
+      "age": "23",
+      "role": "sd",
+      "id": 6
     }
   ]
 }

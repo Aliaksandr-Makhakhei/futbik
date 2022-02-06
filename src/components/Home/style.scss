@@ -1,7 +1,9 @@
 .leaflet-container {
-    margin: 3rem auto;
-    height: 40rem;
+    margin: 2rem auto;
+    height: 30rem;
     width: 40rem;
+    border: 0.5rem solid #fff;
+    border-radius: 0.3rem;
 }
 
 .home {
@@ -9,7 +11,8 @@
 }
 
 .home__title {
-    padding-top: 3rem;
+    padding-top: 1rem;
+    color: #fff;
     font-size: 3rem;
     font-weight: bold;
 }
@@ -18,4 +21,12 @@
     border: 1px solid black;
     border-radius: 1rem;
     padding: 0.5rem;
+}
+
+.home__wrapper {
+    margin: 6rem auto;
+    padding: 1rem 0;
+    width: 45rem;
+    background-color: rgb(243,123,31);
+    border-radius: 0.3rem;
 }

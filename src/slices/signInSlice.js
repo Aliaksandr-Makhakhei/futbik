@@ -1,11 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import usersServices from "../services/Users";
 
-
-
-
-
-
 export const signIn = createAsyncThunk(
   "user/signIn",
   async (userData) => {
@@ -14,8 +9,6 @@ export const signIn = createAsyncThunk(
   }
 )
 
-
-
 export const signInSlice = createSlice({
   name: 'user',
   initialState: {
@@ -23,6 +16,13 @@ export const signInSlice = createSlice({
       isLogin: false,
       status: null,
       error: null,
+  },
+
+  reducers: {
+    logOut: (state) => {
+      state.userSignIn = {}
+      state.isLogin = false;
+    }
   },
 
   extraReducers: {
@@ -42,8 +42,5 @@ export const signInSlice = createSlice({
 
 })
 
-// Action creators are generated for each case reducer function
-// export const { increment } = signInSlice.actions //сюда пишутся функции из reducers
-//counterSlice ЭТО НАЗВАНИЕ ФАЙЛА
-
-export default signInSlice.reducer //вставляется в store хранит в себе все из reduserS
+export const { logOut } = signInSlice.actions
+export default signInSlice.reducer

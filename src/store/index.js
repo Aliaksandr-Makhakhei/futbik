@@ -11,21 +11,21 @@ import {
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import signInReducer from '../slices/signInSlice'
-import signUpReducer from '../slices/signUpSlice'
-import mapMarkersReducer from '../slices/mapMarkers'
-import mapDetailsSlice from '../slices/mapDetails'
+import mapMarkersReducer from '../slices/mapMarkersSlice'
+import stadiumDetailsReducer from '../slices/stadiumDetailsSlice'
+import addPlayerReducer from '../slices/addPlayerSlice'
 
 const persistConfig = {
   key: 'root',
   storage,
-  blacklist: ['getMarkers', 'signIn', 'signUp'] //не закидывает в локал сторадж
+  blacklist: ['getMarkers']
 }
 
 const rootReducer = combineReducers({
     signIn: signInReducer,
-    signUp: signUpReducer,
     getMarkers: mapMarkersReducer,
-    createDetails: mapDetailsSlice,
+    getStadiumDetails:  stadiumDetailsReducer,
+    addPlayer: addPlayerReducer,
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

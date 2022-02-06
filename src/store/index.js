@@ -18,7 +18,7 @@ import addPlayerReducer from '../slices/addPlayerSlice'
 const persistConfig = {
   key: 'root',
   storage,
-  blacklist: ['getMarkers']
+  blacklist: ['getMarkers', 'addPlayer']
 }
 
 const rootReducer = combineReducers({

@@ -3,7 +3,24 @@
     {
       "id": 1,
       "name": "Стадион СШ 37",
-      "players": [],
+      "players": [
+        [
+          {
+            "email": "pupok.vasilii@bk.ru",
+            "name": "Саша",
+            "age": "25",
+            "role": "react",
+            "id": 2
+          },
+          {
+            "email": "mr.mahahei.sasha@gmail.com",
+            "name": "Саша",
+            "age": "23",
+            "role": "Вратарь",
+            "id": 1
+          }
+        ]
+      ],
       "gps": {
         "latitude": 53.93023,
         "longitude": 27.544289
@@ -12,7 +29,17 @@
     {
       "id": 2,
       "name": "Стадион СШ 35",
-      "players": [],
+      "players": [
+        [
+          {
+            "email": "mr.mahahei.sasha@gmail.com",
+            "name": "Саша",
+            "age": "23",
+            "role": "Вратарь",
+            "id": 1
+          }
+        ]
+      ],
       "gps": {
         "latitude": 53.930746,
         "longitude": 27.560241
@@ -30,7 +57,17 @@
     {
       "id": 4,
       "name": "Стадион СШ 180",
-      "players": [],
+      "players": [
+        [
+          {
+            "email": "mr.mahahei.sasha@gmail.com",
+            "name": "Саша",
+            "age": "23",
+            "role": "Вратарь",
+            "id": 1
+          }
+        ]
+      ],
       "gps": {
         "latitude": 53.932846,
         "longitude": 27.499713

@@ -53,38 +53,6 @@
       "age": "25",
       "role": "react",
       "id": 2
-    },
-    {
-      "email": "halakupa@mail.r",
-      "password": "$2a$10$dmnZwO1zcqJL8RVN0lDtLexk50QsDf5XvCE2hnEBUPv95gL8MUoa2",
-      "name": "Саша",
-      "age": "23",
-      "role": "ывап",
-      "id": 3
-    },
-    {
-      "email": "sdgsdg@gmail.com",
-      "password": "$2a$10$Z/H2qezFEVhnpy6ZqJYu3e1kZ2Ly3tabp1wsnVBZtm8s/5dYsDaC2",
-      "name": "Cfif",
-      "age": "324",
-      "role": "sd",
-      "id": 4
-    },
-    {
-      "email": "ufufu@ggg.com",
-      "password": "$2a$10$OLPzM.rGzi57HVLm3Dj.6eXQlGszVPxkZe/oxfh0NBKcyTTetWWe2",
-      "name": "Александр",
-      "age": "23",
-      "role": "dsg",
-      "id": 5
-    },
-    {
-      "email": "mr.mah323ahei.sasha@mail.ru",
-      "password": "$2a$10$TN3RBqlwLLDGquEbraIynOnqC1OEFvTduu0LakvbUAUkRGb7cd0F6",
-      "name": "sdgsg",
-      "age": "23",
-      "role": "sd",
-      "id": 6
     }
   ]
 }

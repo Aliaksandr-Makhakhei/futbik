@@ -5,8 +5,12 @@ import teamServices from "../services/Team";
 export const addPlayer = createAsyncThunk(
     "team/player",
     async (id, player) => {
-      const response = await teamServices.addPlayer(id, player)
-      return response;
+        console.log(id);
+        console.log(player);
+        // const teamUpdate = { players: player }
+        
+    //   const response = await teamServices.addPlayer(id, teamUpdate)
+    //   return response;
     }
   )
   

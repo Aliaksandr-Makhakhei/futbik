@@ -1,21 +1,16 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import stadiumDetailsServices from "../services/StadiumDetails";
+import { useParams } from "react-router-dom";
+import api from "../configs/api";
 
 
 export const getStadiumDetails = createAsyncThunk(
   "stadium/details",
   async (id) => {
-    const response = await stadiumDetailsServices.getDetails(id)
-    return response;
+    const response = await api.get(`/map/${id}`);
+    return response.data
   }
 )
-
-
-
-
-
-
-
 
 export const stadiumDetailsSlice = createSlice({
   name: 'details',

@@ -17,7 +17,6 @@ const onLogOutClick = () => {
   setDropdown(!dropdown)
 }
 
-
   return (
     <nav className="navbar">
       <Link to="/" className="navbar__logo"><img src={logo} alt="logo"/></Link>

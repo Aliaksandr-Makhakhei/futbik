@@ -53,6 +53,14 @@
       "age": "25",
       "role": "react",
       "id": 2
+    },
+    {
+      "email": "galka@gmail.com",
+      "password": "$2a$10$kzCuiLHNeHV7t7rO2gZ0qus7uS.UtE83O9Z93XXY.YjT1XbOEHJGq",
+      "name": "sasha",
+      "age": "23",
+      "role": "ds",
+      "id": 3
     }
   ]
 }

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { mapMarkers } from "../../slices/mapMarkersSlice";
 import { getStadiumDetails } from "../../slices/stadiumDetailsSlice";
+import { clearDetails } from "../../slices/stadiumDetailsSlice"
 import { MapContainer, TileLayer, Marker, Popup, Circle } from "react-leaflet";
 import L from "leaflet";
 import "./style.scss";
@@ -17,29 +18,18 @@ const Home = () => {
   //   iconUrl: require("../../icons/mapicon/user.png"),
   //   iconSize: [40, 40],
   // });
-const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  const markers = useSelector((state) => state.getMarkers.markers);
   
   useEffect(() => {
     dispatch(mapMarkers());
+    dispatch(clearDetails());
   }, [dispatch]);
-
-  
-  
-  const markers = useSelector((state) => state.getMarkers.markers);
   
   const stadium = new L.icon({
     iconUrl: require("../../icons/mapicon/ball.png"),
     iconSize: [40, 40],
   });
-
-  
-
-// const onMarkerClick = (marker) => {
-//   dispatch(createDetails(marker))
-//   // navigate(`/stadium/${marker.id}`)
-// }
-
-
 
   return (
     <div className="home">

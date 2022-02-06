@@ -1,8 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import stadiumDetailsServices from "../services/StadiumDetails";
-import { useParams } from "react-router-dom";
 import api from "../configs/api";
-
 
 export const getStadiumDetails = createAsyncThunk(
   "stadium/details",
@@ -16,6 +13,12 @@ export const stadiumDetailsSlice = createSlice({
   name: 'details',
   initialState: {
       details: {},
+  },
+
+  reducers: {
+    clearDetails: (state) => {
+      state.details = {}
+    }
   },
 
   extraReducers: {
@@ -34,4 +37,5 @@ export const stadiumDetailsSlice = createSlice({
 
 })
 
+export const { clearDetails } = stadiumDetailsSlice.actions
 export default stadiumDetailsSlice.reducer

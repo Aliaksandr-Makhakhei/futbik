@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import teamServices from "../services/Team";
+
 
 
 export const addPlayer = createAsyncThunk(
@@ -7,6 +7,13 @@ export const addPlayer = createAsyncThunk(
     async (id, player) => {
         console.log(id);
         console.log(player);
+
+        // const teamUpdate = { "players": player }
+        // const response = await api.patch(`/map/${id}`, teamUpdate);
+        // return response.data;
+
+
+
         // const teamUpdate = { players: player }
         
     //   const response = await teamServices.addPlayer(id, teamUpdate)

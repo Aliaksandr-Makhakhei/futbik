@@ -1,8 +1,7 @@
 import {React, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../icons/navbar/logo.svg"
-import { useDispatch } from "react-redux";
-import usersServices from "../../services/Users";
+import api from "../../configs/api";
 import "./style.scss";
 
 
@@ -13,7 +12,6 @@ const SignUp = () => {
   const [inputAge, setInputAge] = useState("");
   const [inputRole, setInputRole] = useState("");
   const navigate = useNavigate();
-  const dispatch = useDispatch()
 
   const userData = {
     'email': inputEmail,
@@ -23,14 +21,10 @@ const SignUp = () => {
     'role': inputRole
   }
 
-
   const onClickSignUp = async () => {
-    await usersServices.signUp(userData)
+    await api.post(`/users`, userData)
     navigate(`/login`)
   }
-
-
-
 
   return (
     <div className="signup">
@@ -81,5 +75,5 @@ const SignUp = () => {
     </div>
   );
 };
- //добавить значек увидеть пароль для ввода пароля
+
 export default SignUp;

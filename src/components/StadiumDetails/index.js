@@ -1,58 +1,18 @@
 import {React, useEffect, useState} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { MapContainer, TileLayer, Marker, Circle } from "react-leaflet";
-import "./style.scss";
-import teamServices from "../../services/Team";
 import { getStadiumDetails } from "../../slices/stadiumDetailsSlice";
-
 import { useParams } from "react-router-dom";
+import "./style.scss";
+import api from "../../configs/api";
 
 
 
 const StadiumDetails = () => {
 
-// const params = useParams()
-// const dispatch = useDispatch();
 
-
-//   dispatch(getStadiumDetails(params.stadiumId))
-
-
-// const details = useSelector((state) => state.getStadiumDetails.details);
-// const userData = useSelector((state) => state.signIn.userSignIn.user);
-
-
-
-//   const {id, name, players, gps} = details
-
-
-
-// const onAcceptClick = async () => {
-//   const newArray = players.slice();
-//   newArray.push(userData)
-//   await teamServices.addPlayer(id, newArray)
-// }
-
-
-// const playersList = players.map(player => {
-//   return (
-//     <div key={player.id} className="details">{player.name} {player.role}</div>
-//   )
-// })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  const details = useSelector((state) => state.getStadiumDetails.details);
+  console.log(details);
 
 
 
@@ -79,3 +39,38 @@ const StadiumDetails = () => {
 };
 
 export default StadiumDetails;
+
+
+
+
+
+
+
+// const params = useParams()
+// const dispatch = useDispatch();
+
+
+//   dispatch(getStadiumDetails(params.stadiumId))
+
+// const details = useSelector((state) => state.getStadiumDetails.details);
+// const userData = useSelector((state) => state.signIn.userSignIn.user);
+
+//   const {id, name, players, gps} = details
+
+// const onAcceptClick = async () => {
+//   const newArray = players.slice();
+//   newArray.push(userData)
+//   await teamServices.addPlayer(id, newArray)
+// }
+
+
+// const playersList = players.map(player => {
+//   return (
+//     <div key={player.id} className="details">{player.name} {player.role}</div>
+//   )
+// })
+
+
+// const pathname = useParams()
+// const {id, name, players, gps} = details
+// const details = useSelector((state) => state.getStadiumDetails.details);

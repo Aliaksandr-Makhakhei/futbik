@@ -1,0 +1,43 @@
+.account {
+    margin: 10rem auto;
+    width: 20rem;
+    height: 20rem;
+    background-color: #fff;
+    border-radius: 0.3rem;
+    border: 0.5rem solid rgb(243,123,31);
+}
+
+.account__wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.account__title {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 2rem;
+}
+
+.account__avatar {
+    margin: 0 auto;
+    width: 5.5rem;
+    padding: 2rem 1rem;
+    border-radius: 50%;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+.account__name {
+    padding-top: 1rem;
+}
+
+.account__age {
+    padding: 1rem 0;
+}
+
+.account__role {
+
+}

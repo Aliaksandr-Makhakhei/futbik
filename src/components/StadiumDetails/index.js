@@ -8,6 +8,7 @@ import "./style.scss";
 
 const StadiumDetails = () => {
   const [info, setInfo] = useState([])
+  const [selected, setSelected] = useState(false)
   const dispatch = useDispatch();
   const details = useSelector((state) => state.getStadiumDetails.details);
   const userData = useSelector((state) => state.signIn.userSignIn.user);
@@ -26,7 +27,7 @@ const onAcceptClick = async () => {
         return item.email === userData.email
       })
       if(falsy === true){
-           return console.log("уже есть такой");
+           return null
          } else {
           const newPlayer = [...info, userData]
           setInfo(newPlayer)
@@ -42,6 +43,13 @@ const list = info.map(item => {
   )
 })
 
+
+
+const onPositionClick = () => {
+  setSelected(!selected)
+}
+
+
   return (
    <>
    <div className="detail__button" onClick={() => onAcceptClick()}>Иду на футбик</div>
@@ -49,8 +57,8 @@ const list = info.map(item => {
      {list}
 
      <div className="detail__field">
-     <img src={field} alt="footbal field" width="900" height="600"/>
-      <div className="position__one">1</div>
+     <img src={field} alt="footbal field" width="900" height="700"/>
+      <div className="position__one" onClick={() => onPositionClick()}>1</div>
       <div className="position__two">2</div>
       <div className="position__three">3</div>
       <div className="position__four" >4</div>

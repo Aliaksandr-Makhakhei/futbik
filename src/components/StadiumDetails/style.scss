@@ -41,10 +41,8 @@
     color: rgb(243,123,31);
     font-size: 2rem;
     background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(255, 255, 255);
     border-radius: 20%;
 }
-
 
 .position__one {
     top: 46%;
@@ -59,8 +57,14 @@
     left: 20%;
 }
 .position__four {
-   
+    top: 30%;
+    left: 40%;
 }
 .position__five {
+    bottom: 30%;
+    left: 40%;
+}
 
+.selected {
+    background-color: rgb(255, 0, 0);
 }

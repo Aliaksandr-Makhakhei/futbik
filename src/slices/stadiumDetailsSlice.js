@@ -13,15 +13,11 @@ export const stadiumDetailsSlice = createSlice({
   name: 'details',
   initialState: {
       details: {},
-      player: []
   },
 
   reducers: {
     clearDetails: (state) => {
       state.details = {}
-    },
-    clearPlayer: (state) => {
-      state.player = []
     }
   },
 
@@ -41,5 +37,5 @@ export const stadiumDetailsSlice = createSlice({
 
 })
 
-export const { clearDetails, clearPlayer } = stadiumDetailsSlice.actions
+export const { clearDetails } = stadiumDetailsSlice.actions
 export default stadiumDetailsSlice.reducer

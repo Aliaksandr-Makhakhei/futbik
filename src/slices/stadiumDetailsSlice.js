@@ -9,23 +9,19 @@ export const getStadiumDetails = createAsyncThunk(
   }
 )
 
-// export const addPlayer = createAsyncThunk(
-//   "stadium/addPlayer",
-//   async (id, player) => {
-//     const teamUpdate = { "players": player }
-//     await api.patch(`/map/${id}`, teamUpdate);
-//   }
-// )
-
 export const stadiumDetailsSlice = createSlice({
   name: 'details',
   initialState: {
       details: {},
+      player: []
   },
 
   reducers: {
     clearDetails: (state) => {
       state.details = {}
+    },
+    clearPlayer: (state) => {
+      state.player = []
     }
   },
 
@@ -41,15 +37,9 @@ export const stadiumDetailsSlice = createSlice({
     [getStadiumDetails.rejected]: (state) => {
       state.error = "какая-то ошибка"
     },
-
-    // [addPlayer.fulfilled]: (state, action) => {
-    //   state.status = "resolved";
-    //   console.log(action.payload);
-    //   // state.details.players = action.payload;
-    // },
   }
 
 })
 
-export const { clearDetails } = stadiumDetailsSlice.actions
+export const { clearDetails, clearPlayer } = stadiumDetailsSlice.actions
 export default stadiumDetailsSlice.reducer

@@ -30,7 +30,6 @@ export const mapMarkersSlice = createSlice({
       state.error = "какая-то ошибка"
     },
   }
-
 })
 
 export default mapMarkersSlice.reducer

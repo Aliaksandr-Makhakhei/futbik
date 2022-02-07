@@ -10,14 +10,6 @@ import "./style.scss";
 
 const Home = () => {
 
-// const [userGPS, setUserGPS] = useState({})
- // navigator.geolocation.getCurrentPosition((position) => {
-  //   setUserGPS(position.coords);
-  // });
-// const userLocation = new L.icon({
-  //   iconUrl: require("../../icons/mapicon/user.png"),
-  //   iconSize: [40, 40],
-  // });
   const dispatch = useDispatch();
   const markers = useSelector((state) => state.getMarkers.markers);
   
@@ -31,6 +23,8 @@ const Home = () => {
     iconSize: [40, 40],
   });
 
+  const isLogin = useSelector((state) => state.signIn.isLogin);
+
   return (
     <div className="home">
       <div className="home__wrapper">
@@ -40,14 +34,13 @@ const Home = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {/* <Marker position={[userGPS.latitude, userGPS.longitude]} icon={userLocation}></Marker> */}
         {markers.map((marker) => {
           const {id, name, gps} = marker
           return (
             <Marker key={id} position={[gps.latitude, gps.longitude]} icon={stadium}>
               <Popup>
                 <div className="map__marker-title">{name}</div>
-                <Link className="map__marker-details" to={`/stadium/${id}`} onClick={() => dispatch(getStadiumDetails(id))}>Подробнее</Link>
+                {isLogin === false ? <Link to="/login">Нужно авторизоваться</Link> : <Link className="map__marker-details" to={`/stadium/${id}`} onClick={() => dispatch(getStadiumDetails(id))}>Подробнее</Link>}
               </Popup>
               <Circle center={[gps.latitude, gps.longitude]} radius={70} />
             </Marker>

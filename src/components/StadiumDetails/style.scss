@@ -1,4 +1,5 @@
 .mapa {
+    margin-right: 10rem;
     width: 25rem;
     height: 25rem;
 }
@@ -21,4 +22,45 @@
 .details__name {
     font-size: 2rem;
     color: #fff;
+}
+
+.detail__field-image {
+    margin-left: 10rem;
+    width: 20rem;
+    height: 10rem;
+}
+
+.detail__field {
+    width: 56rem;
+    position: relative;
+}
+
+.position__one, .position__two, .position__three, .position__four, .position__five {
+    position: absolute;
+    padding: 0.5rem;
+    color: rgb(243,123,31);
+    font-size: 2rem;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20%;
+}
+
+
+.position__one {
+    top: 46%;
+    left: 5%;
+}
+.position__two {
+    top: 30%;
+    left: 20%;
+}
+.position__three {
+    bottom: 30%;
+    left: 20%;
+}
+.position__four {
+   
+}
+.position__five {
+
 }

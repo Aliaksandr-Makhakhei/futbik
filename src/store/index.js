@@ -13,23 +13,20 @@ import storage from 'redux-persist/lib/storage'
 import signInReducer from '../slices/signInSlice'
 import mapMarkersReducer from '../slices/mapMarkersSlice'
 import stadiumDetailsReducer from '../slices/stadiumDetailsSlice'
-import addPlayerReducer from '../slices/addPlayerSlice'
 
 const persistConfig = {
   key: 'root',
   storage,
-  blacklist: ['getMarkers', 'addPlayer']
+  blacklist: ['getMarkers']
 }
 
 const rootReducer = combineReducers({
     signIn: signInReducer,
     getMarkers: mapMarkersReducer,
-    getStadiumDetails:  stadiumDetailsReducer,
-    addPlayer: addPlayerReducer,
+    getStadiumDetails: stadiumDetailsReducer,
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
-
 
 const store = configureStore({
   reducer: persistedReducer,

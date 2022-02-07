@@ -4,22 +4,20 @@
       "id": 1,
       "name": "Стадион СШ 37",
       "players": [
-        [
-          {
-            "email": "pupok.vasilii@bk.ru",
-            "name": "Саша",
-            "age": "25",
-            "role": "react",
-            "id": 2
-          },
-          {
-            "email": "mr.mahahei.sasha@gmail.com",
-            "name": "Саша",
-            "age": "23",
-            "role": "Вратарь",
-            "id": 1
-          }
-        ]
+        {
+          "email": "mr.mahahei.sasha@gmail.com",
+          "name": "Саша",
+          "age": "23",
+          "role": "Вратарь",
+          "id": 1
+        },
+        {
+          "email": "pupok.vasilii@bk.ru",
+          "name": "Саша",
+          "age": "25",
+          "role": "react",
+          "id": 2
+        }
       ],
       "gps": {
         "latitude": 53.93023,
@@ -30,15 +28,20 @@
       "id": 2,
       "name": "Стадион СШ 35",
       "players": [
-        [
-          {
-            "email": "mr.mahahei.sasha@gmail.com",
-            "name": "Саша",
-            "age": "23",
-            "role": "Вратарь",
-            "id": 1
-          }
-        ]
+        {
+          "email": "mr.mahahei.sasha@gmail.com",
+          "name": "Саша",
+          "age": "23",
+          "role": "Вратарь",
+          "id": 1
+        },
+        {
+          "email": "pupok.vasilii@bk.ru",
+          "name": "Саша",
+          "age": "25",
+          "role": "react",
+          "id": 2
+        }
       ],
       "gps": {
         "latitude": 53.930746,
@@ -58,15 +61,20 @@
       "id": 4,
       "name": "Стадион СШ 180",
       "players": [
-        [
-          {
-            "email": "mr.mahahei.sasha@gmail.com",
-            "name": "Саша",
-            "age": "23",
-            "role": "Вратарь",
-            "id": 1
-          }
-        ]
+        {
+          "email": "mr.mahahei.sasha@gmail.com",
+          "name": "Саша",
+          "age": "23",
+          "role": "Вратарь",
+          "id": 1
+        },
+        {
+          "email": "pupok.vasilii@bk.ru",
+          "name": "Саша",
+          "age": "25",
+          "role": "react",
+          "id": 2
+        }
       ],
       "gps": {
         "latitude": 53.932846,

@@ -21,9 +21,6 @@ const Login = () => {
        navigate(`/`);
     }
 
-
-
-
   return (
     <div className="login">
       <div className="login__form">

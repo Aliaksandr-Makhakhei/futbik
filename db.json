@@ -9,14 +9,8 @@
           "name": "Саша",
           "age": "23",
           "role": "Вратарь",
-          "id": 1
-        },
-        {
-          "email": "pupok.vasilii@bk.ru",
-          "name": "Саша",
-          "age": "25",
-          "role": "react",
-          "id": 2
+          "id": 1,
+          "position": 4
         }
       ],
       "gps": {
@@ -27,22 +21,7 @@
     {
       "id": 2,
       "name": "Стадион СШ 35",
-      "players": [
-        {
-          "email": "mr.mahahei.sasha@gmail.com",
-          "name": "Саша",
-          "age": "23",
-          "role": "Вратарь",
-          "id": 1
-        },
-        {
-          "email": "pupok.vasilii@bk.ru",
-          "name": "Саша",
-          "age": "25",
-          "role": "react",
-          "id": 2
-        }
-      ],
+      "players": [],
       "gps": {
         "latitude": 53.930746,
         "longitude": 27.560241
@@ -60,22 +39,7 @@
     {
       "id": 4,
       "name": "Стадион СШ 180",
-      "players": [
-        {
-          "email": "mr.mahahei.sasha@gmail.com",
-          "name": "Саша",
-          "age": "23",
-          "role": "Вратарь",
-          "id": 1
-        },
-        {
-          "email": "pupok.vasilii@bk.ru",
-          "name": "Саша",
-          "age": "25",
-          "role": "react",
-          "id": 2
-        }
-      ],
+      "players": [],
       "gps": {
         "latitude": 53.932846,
         "longitude": 27.499713
@@ -89,7 +53,8 @@
       "name": "Саша",
       "age": "23",
       "role": "Вратарь",
-      "id": 1
+      "id": 1,
+      "position": 0
     },
     {
       "email": "pupok.vasilii@bk.ru",
@@ -97,15 +62,8 @@
       "name": "Саша",
       "age": "25",
       "role": "react",
-      "id": 2
-    },
-    {
-      "email": "galka@gmail.com",
-      "password": "$2a$10$kzCuiLHNeHV7t7rO2gZ0qus7uS.UtE83O9Z93XXY.YjT1XbOEHJGq",
-      "name": "sasha",
-      "age": "23",
-      "role": "ds",
-      "id": 3
+      "id": 2,
+      "position": 0
     }
   ]
 }

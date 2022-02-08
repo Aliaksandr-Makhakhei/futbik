@@ -18,7 +18,8 @@ const SignUp = () => {
     'password': inputPass,
     'name': inputName,
     'age': inputAge,
-    'role': inputRole
+    'role': inputRole,
+    'position': 0,
   }
 
   const onClickSignUp = async () => {

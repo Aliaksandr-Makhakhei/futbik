@@ -1,15 +1,20 @@
 import { React, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import {signIn} from "../../slices/signInSlice"
+import { signIn } from "../../slices/signInSlice"
 import logo from "../../icons/navbar/logo.svg"
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { clearError } from "../../slices/signInSlice"
 import "./style.scss";
 
 const Login = () => {
   const [inputLogin, setInputLogin] = useState("");
   const [inputPass, setInputPass] = useState("");
+  const error = useSelector((state) => state.signIn.error);
   const navigate = useNavigate();
   const dispatch = useDispatch()
+
+console.log(error);
+
 
   const userData = {
     email: inputLogin,
@@ -18,14 +23,24 @@ const Login = () => {
 
     const onClickLogin = () => {
        dispatch(signIn(userData))
-       navigate(`/`);
+       if(error === true) {
+         return null
+       } else {
+        navigate(`/`)
+       }
+    }
+
+    const deleteError = () => {
+      dispatch(clearError())
     }
 
   return (
     <div className="login">
       <div className="login__form">
       <img src={logo} alt="logo"/>
+      {error && <div className="login__error">Вы ввели некорректные данные!</div>}
         <input
+         
           className="login__form-login"
           type="text"
           name="login"
@@ -34,6 +49,7 @@ const Login = () => {
           onChange={(event) => setInputLogin(event.target.value)}
         />
         <input
+         
           className="login__form-password"
           type="password"
           name="password"
@@ -49,4 +65,3 @@ const Login = () => {
 };
 
 export default Login;
-//добавить отправку на сервер по онклик

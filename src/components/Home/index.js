@@ -2,8 +2,8 @@ import { React, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { mapMarkers } from "../../slices/mapMarkersSlice";
-import { getStadiumDetails } from "../../slices/stadiumDetailsSlice";
-import { clearDetails } from "../../slices/stadiumDetailsSlice"
+import { getStadiumDetails, clearDetails } from "../../slices/stadiumDetailsSlice";
+import { clearError } from "../../slices/signInSlice"
 import { MapContainer, TileLayer, Marker, Popup, Circle } from "react-leaflet";
 import L from "leaflet";
 import "./style.scss";
@@ -16,6 +16,7 @@ const Home = () => {
   useEffect(() => {
     dispatch(mapMarkers());
     dispatch(clearDetails());
+    dispatch(clearError())
   }, [dispatch]);
   
   const stadium = new L.icon({

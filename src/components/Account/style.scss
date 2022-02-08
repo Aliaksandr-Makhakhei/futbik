@@ -1,7 +1,7 @@
 .account {
     margin: 10rem auto;
-    width: 20rem;
-    height: 20rem;
+    width: 20%;
+    height: 25%;
     background-color: #fff;
     border-radius: 0.3rem;
     border: 0.5rem solid rgb(243,123,31);
@@ -38,6 +38,21 @@
     padding: 1rem 0;
 }
 
-.account__role {
+.account__stadium {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 0.3rem;
+}
 
+.account__stadium-info {
+    padding-bottom: 1rem;
+}
+
+.account__stadium-go {
+    padding: 0.3rem;
+    background-color: rgb(243,123,31);
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 0.3rem;
 }

@@ -1,5 +1,5 @@
 import {React, useState} from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {logOut} from "../../slices/signInSlice"
 import logo from "../../icons/navbar/logo.svg"
@@ -10,11 +10,13 @@ import "./style.scss";
 const Navbar = () => {
 const [dropdown, setDropdown] = useState(false)
   const isLogin = useSelector((state) => state.signIn.isLogin);
+  const navigate = useNavigate();
   const dispatch = useDispatch()
 
 const onLogOutClick = () => {
   dispatch(logOut())
   setDropdown(!dropdown)
+  navigate('/')
 }
 
   return (

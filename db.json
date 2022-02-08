@@ -3,16 +3,6 @@
     {
       "id": 1,
       "name": "Стадион СШ 37",
-      "players": [
-        {
-          "email": "mr.mahahei.sasha@gmail.com",
-          "name": "Саша",
-          "age": "23",
-          "role": "Вратарь",
-          "id": 1,
-          "position": 4
-        }
-      ],
       "gps": {
         "latitude": 53.93023,
         "longitude": 27.544289
@@ -21,7 +11,6 @@
     {
       "id": 2,
       "name": "Стадион СШ 35",
-      "players": [],
       "gps": {
         "latitude": 53.930746,
         "longitude": 27.560241
@@ -30,7 +19,6 @@
     {
       "id": 3,
       "name": "Стадион СШ 95",
-      "players": [],
       "gps": {
         "latitude": 53.934082,
         "longitude": 27.563032
@@ -39,7 +27,6 @@
     {
       "id": 4,
       "name": "Стадион СШ 180",
-      "players": [],
       "gps": {
         "latitude": 53.932846,
         "longitude": 27.499713
@@ -54,7 +41,8 @@
       "age": "23",
       "role": "Вратарь",
       "id": 1,
-      "position": 0
+      "position": 2,
+      "mapId": 4
     },
     {
       "email": "pupok.vasilii@bk.ru",
@@ -63,7 +51,18 @@
       "age": "25",
       "role": "react",
       "id": 2,
-      "position": 0
+      "position": 1,
+      "mapId": 1
+    },
+    {
+      "email": "halakupa@mail.ru",
+      "password": "$2a$10$FJmiMZbJp1aqNTAvG0HGDOHl5pAZmV8pHtuEZ5SyNCA5cAI11lglS",
+      "name": "Вася",
+      "age": "23",
+      "role": "Нападающий",
+      "position": 6,
+      "id": 3,
+      "mapId": 1
     }
   ]
 }

@@ -15,20 +15,23 @@ export const signInSlice = createSlice({
       userSignIn: {},
       isLogin: false,
       status: null,
-      error: null,
+      error: false,
   },
 
   reducers: {
     logOut: (state) => {
       state.userSignIn = {}
       state.isLogin = false;
+    },
+    clearError: (state) => {
+      state.error = false
     }
   },
 
   extraReducers: {
     [signIn.pending]: (state) => {
       state.status = "loading";
-      state.error = "какая-то ошибка";
+      state.error = true
     },
     [signIn.fulfilled]: (state, action) => {
       state.status = "resolved";
@@ -36,11 +39,11 @@ export const signInSlice = createSlice({
       state.userSignIn = action.payload;
     },
     [signIn.rejected]: (state) => {
-      state.error = "какая-то ошибка"
+      state.error = true
     },
   }
 
 })
 
-export const { logOut } = signInSlice.actions
+export const { logOut, clearError } = signInSlice.actions
 export default signInSlice.reducer

@@ -1,47 +1,51 @@
-.mapa {
-    margin-right: 10rem;
-    width: 25rem;
-    height: 25rem;
+.map {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    top: 38%;
+    left: 6%;
 }
 
 .details {
-    font-size: 2rem;
-    color: #fff;
+    color: rgb(243,123,31);
 }
 
 .detail__button {
     width: 200px;
     padding: 0.4rem;
     margin: 0 auto;
-    color: #fff;
     background-color: red;
     font-size: 2rem;
     cursor: pointer;
 }
 
 .details__name {
-    font-size: 2rem;
-    color: #fff;
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 3rem;
 }
 
-.detail__field-image {
-    margin-left: 10rem;
-    width: 20rem;
-    height: 10rem;
+.details__players {
+    font-size: 2rem;
 }
 
 .detail__field {
+    margin: 0 auto;
     width: 56rem;
     position: relative;
 }
 
-.position__one, .position__two, .position__three, .position__four, .position__five {
+.position__one, .position__two, .position__three, .position__four, .position__five, .position__six, .position__seven, .position__eight, .position__nine, .position__ten{
     position: absolute;
-    padding: 0.5rem;
+    padding-top: 1rem;
+    text-align: center;
+    width: 4rem;
+    height: 4rem;
     color: rgb(243,123,31);
     font-size: 2rem;
     background-color: rgb(255, 255, 255);
     border-radius: 20%;
+    cursor: pointer;
 }
 
 .position__one {
@@ -57,14 +61,38 @@
     left: 20%;
 }
 .position__four {
-    top: 30%;
+    top: 35%;
     left: 40%;
 }
 .position__five {
-    bottom: 30%;
+    bottom: 35%;
     left: 40%;
+}
+.position__six {
+    top: 46%;
+    right: 5%;
+}
+.position__seven {
+    top: 30%;
+    right: 20%;
+}
+.position__eight {
+    bottom: 30%;
+    right: 20%;
+}
+.position__nine {
+    top: 35%;
+    right: 40%;
+}
+.position__ten {
+    bottom: 35%;
+    right: 40%;
 }
 
 .selected {
     background-color: rgb(255, 0, 0);
+}
+
+.details__busy {
+    font-size: 2rem;
 }

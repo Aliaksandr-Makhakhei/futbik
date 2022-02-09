@@ -15,7 +15,7 @@ export const signInSlice = createSlice({
       userSignIn: {},
       isLogin: false,
       status: null,
-      error: false,
+      error: true,
   },
 
   reducers: {
@@ -34,6 +34,7 @@ export const signInSlice = createSlice({
       state.error = true
     },
     [signIn.fulfilled]: (state, action) => {
+      state.error = false;
       state.status = "resolved";
       state.isLogin = true;
       state.userSignIn = action.payload;

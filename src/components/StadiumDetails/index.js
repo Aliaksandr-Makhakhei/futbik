@@ -9,17 +9,58 @@ const StadiumDetails = () => {
   const [mapInfo, setMapInfo] = useState([])
   const [isBusy, setIsBusy] = useState(false)
   const positions = [
-    {id: 1, name: 'one'}, 
-    {id: 2, name: 'two'}, 
-    {id: 3, name: 'three'}, 
-    {id: 4, name: 'four'}, 
-    {id: 5, name: 'five'},
-    {id: 6, name: 'six'},
-    {id: 7, name: 'seven'},
-    {id: 8, name: 'eight'},
-    {id: 9, name: 'nine'},
-    {id: 10, name: 'ten'},
+    {id: 1, name: 'one', selected: false}, 
+    {id: 2, name: 'two', selected: false}, 
+    {id: 3, name: 'three', selected: false}, 
+    {id: 4, name: 'four', selected: false}, 
+    {id: 5, name: 'five', selected: false},
+    {id: 6, name: 'six', selected: false},
+    {id: 7, name: 'seven', selected: false},
+    {id: 8, name: 'eight', selected: false},
+    {id: 9, name: 'nine', selected: false},
+    {id: 10, name: 'ten', selected: false},
   ]
+
+  // const positionCount = positions.map(position => mapInfo.map(player => {
+  //   if(position.id === player.position){
+  //     return positions.selected = true
+  //   } else {
+  //     return position.id
+  //   }
+  // }));
+
+  // const positionCount = positions.map(position => mapInfo.map(player => {
+  //   if(position.id === player.position){
+  //     return (
+  //       {
+  //         "id": position.id,
+  //         "name": position.name,
+  //         "selected": position.selected = true
+  //       } else {
+
+  //       }
+  //     }
+  //     })
+  // }));
+  
+
+  const positionCount = positions.map(position => mapInfo.map(player => {
+    if(position.id === player.position){
+      return  { "id": position.id, "name": position.name, "selected": position.selected = true}
+    } else {
+      return  { "id": position.id, "name": position.name, "selected": position.selected = false}
+    }
+  }))
+
+
+
+console.log(positionCount);
+
+
+
+
+
+
   const details = useSelector((state) => state.getStadiumDetails.details);
   const userData = useSelector((state) => state.signIn.userSignIn.user);
   const {id, name, gps} = details
@@ -38,20 +79,22 @@ const onAcceptClick = async (positionNumber) => {
   } else {
     setIsBusy(false)
     await api.patch(`/users/${userData.id}`, { "position": positionNumber, "mapId": id });
+    const getUsersData = await api.get(`/users`)
+    const users = getUsersData.data
+    const thisMapPlayers = users.filter(player => player.mapId === id)
+    setMapInfo(thisMapPlayers);
   }
 }
 
-
-
 const positionOnMap = positions.map((position) => {
   return (
-    <div key={position.id} className={`position__${position.name}`} onClick={() => onAcceptClick(position.id)}>{position.id}</div>
+    <div key={position.id} className={`position__${position.name} ${position.selected && "position__selected"}`} onClick={() => onAcceptClick(position.id)}>{position.id}</div>
   )
 })
 
 const list = mapInfo.map(player => {
   return (
-  <div key={player.id} className="details__players">{player.name}</div>
+  <div key={player.id} className="details__players">Имя: {player.name} | Амплуа: {player.role} | Позиция: {player.position}</div>
   )
 })
 

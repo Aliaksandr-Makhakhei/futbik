@@ -1,0 +1,26 @@
+.new-map {
+    margin: 10rem auto;
+    width: 20%;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 0.3rem;
+    background-color: rgba(255, 255, 255);
+    border: 5px solid rgb(243,123,31);
+}
+
+.new-map__name, .new-map__latitude, .new-map__longitude {
+    margin: 2rem auto;
+    padding: 0.5rem;
+    width: 70%;
+    border: 2px solid rgb(243,123,31);
+    border-radius: 0.3rem;
+}
+
+.new-map__form-submit {
+    width: 30%;
+    margin: 0.5rem auto;
+    padding: 0.7rem;
+    text-align: center;
+    background-color: rgb(243,123,31);
+    border-radius: 0.3rem;
+    cursor: pointer;
+}

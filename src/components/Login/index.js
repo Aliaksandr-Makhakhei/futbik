@@ -13,7 +13,7 @@ const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch()
 
-console.log(error);
+
 
 
   const userData = {
@@ -23,22 +23,24 @@ console.log(error);
 
     const onClickLogin = () => {
        dispatch(signIn(userData))
-       if(error === true) {
-         return null
-       } else {
-        navigate(`/`)
-       }
+       navigate(`/`)
+      //  console.log(error);
+      //  if(error === true) {
+      //    return null
+      //  } else if (error === false){
+      //   navigate(`/`)
+      //  }
     }
 
-    const deleteError = () => {
-      dispatch(clearError())
-    }
+    // const deleteError = () => {
+    //   dispatch(clearError())
+    // }
 
   return (
     <div className="login">
       <div className="login__form">
       <img src={logo} alt="logo"/>
-      {error && <div className="login__error">Вы ввели некорректные данные!</div>}
+      {/* {error && <div className="login__error">Вы ввели некорректные данные!</div>} */}
         <input
          
           className="login__form-login"
@@ -49,7 +51,7 @@ console.log(error);
           onChange={(event) => setInputLogin(event.target.value)}
         />
         <input
-         
+
           className="login__form-password"
           type="password"
           name="password"
